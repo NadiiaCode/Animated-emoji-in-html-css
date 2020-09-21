@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jumping Emojis</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="emojis">
+        <div>😀</div>
+        <div>😂</div>
+        <div>😈</div>
+        <div>😉</div>
+        <div>😍</div>
+        <div>😎</div>
+        <div>😛</div>
+        <div>🙂</div>
+        <div>🤑</div>
+        <div>🤩</div>
+      </div>
+
+      <div class="bars">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding-top: 400px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .bars,
+      .emojis {
+        display: flex;
+      }
+
+      .bars div,
+      .emojis div {
+        margin: 0 7px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .bars {
+        position: relative;
+      }
+
+      .bars:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+      }
+
+      .emojis div {
+        position: relative;
+        font-size: 40px;
+        text-align: center;
+        animation: jump calc(2s * 2) cubic-bezier(0.12, 0.18, 0.5, 1.2) infinite;
+      }
+
+      .bars div {
+        transform-origin: 50% 100%;
+        animation: stretch 2s cubic-bezier(0.14, 0.2, 0.6, 1.6) infinite;
+      }
+
+      .bars div:nth-child(1n) {
+        background: #fd1f8a;
+      }
+
+      .bars div:nth-child(2n) {
+        background: #00f7ff;
+      }
+
+      .bars div:nth-child(3n) {
+        background: #ff0000;
+      }
+
+      .bars div:nth-child(4n) {
+        background: #fffb00;
+      }
+
+      .bars div:nth-child(5n) {
+        background: #1eff00;
+      }
+
+      .bars div:nth-child(6n) {
+        background: #ff4800;
+      }
+
+      .bars div:nth-child(7n) {
+        background: #a200ff;
+      }
+
+      .bars div:nth-child(8n) {
+        background: #b3ff00;
+      }
+
+      .bars div:nth-child(9n) {
+        background: #ff0095;
+      }
+
+      .bars div:nth-child(10) {
+        background: #ff1919;
+      }
+
+      .bars div:nth-child(1),
+      .emojis div:nth-child(1) {
+        animation-delay: 0.09s;
+      }
+
+      .bars div:nth-child(2),
+      .emojis div:nth-child(2) {
+        animation-delay: 0.19s;
+      }
+
+      .bars div:nth-child(3),
+      .emojis div:nth-child(3) {
+        animation-delay: 0.29s;
+      }
+
+      .bars div:nth-child(4),
+      .emojis div:nth-child(4) {
+        animation-delay: 0.39s;
+      }
+
+      .bars div:nth-child(5),
+      .emojis div:nth-child(5) {
+        animation-delay: 0.49s;
+      }
+
+      .bars div:nth-child(6),
+      .emojis div:nth-child(6) {
+        animation-delay: 0.59s;
+      }
+
+      .bars div:nth-child(7),
+      .emojis div:nth-child(7) {
+        animation-delay: 0.69s;
+      }
+
+      .bars div:nth-child(8),
+      .emojis div:nth-child(8) {
+        animation-delay: 0.79s;
+      }
+
+      .bars div:nth-child(9),
+      .emojis div:nth-child(9) {
+        animation-delay: 0.89s;
+      }
+
+      .bars div:nth-child(10),
+      .emojis div:nth-child(10) {
+        animation-delay: 0.99s;
+      }
+
+      @keyframes jump {
+        35% {
+          transform: translateY(calc(8vmin * -6)) rotate(25deg);
+        }
+        50% {
+          transform: translateY(0) rotate(0);
+        }
+        85% {
+          transform: translateY(calc(8vmin * -6)) rotate(-35deg);
+        }
+      }
+
+      @keyframes stretch {
+        50% {
+          transform: scaleY(5);
+        }
+      }
+
+      */add any emoji, any color, any extra columns*/
+    </style>
+  </body>
+</html>
